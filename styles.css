@@ -106,15 +106,19 @@ nav a:hover{
     text-shadow: rgb(0, 0, 255) 1px 0 10px;
 }
 
+
+
+/* Body */
 .content-area {
     width: 100%;
-    height: 800px;
+    height: 1200px;
     position: relative;
     background-image: url("media/pokeball_backdrop.jpg");
     background-size: cover;
     background-position: center center;
     top: 550px;
 }
+
 
 .content-area h3 {
     padding: 8%;
@@ -129,10 +133,92 @@ nav a:hover{
     line-height: 30px;
     text-align: justify;
     font-family: "Marg";
-    color: rgb(12, 72, 72);
+    color: rgb(200, 0, 0, .9);
     font-weight: 1000;
     text-shadow: rgb(0, 0, 255) 1px 0 10px;
 }
-/* Body */
 
+.content-area img {
+    position: relative;
+    float: right;
+    height: 500px;
+    width: 350px;
+    margin-right: 15em;
+}
+
+.whocontent {
+    position: relative;
+    float: left;
+    max-width: 1000px;
+    margin-left: 4em;
+    font-style: italic;
+}
+
+.what {
+    width: 100%;
+    height: 1200px;
+    position: relative;
+    background-image: url("media/pikabackdrop.jpg");
+    background-size: cover;
+    background-position: center center;
+    top: 550px;
+    
+}
+
+.whatbody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: row;
+    width: 70%;
+}
+.what h3 {
+    padding: 8%;
+    font-size: 80px;
+    text-shadow: rgb(0, 0, 0) 1px 0 10px;
+    letter-spacing: 4px;
+    color: rgb(200, 0, 0, 0.8);
+}
+
+.whatent h4 {
+    padding: 8%;
+    text-shadow: rgb(0, 0, 0) 1px 0 10px;
+    letter-spacing: 4px;
+    color: rgb(200, 0, 0, 0.8);
+}
+
+
+.whatcontainer {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.whatcontainer .whatcard {
+    position: relative;
+    max-width: 50%;
+    background: rgb(0, 0, 255, 0.8);
+    margin: 10px;
+    padding: 15px;
+    display: flex;
+}
+
+.whatcontainer .whatcard .whatimgbox {
+    max-width: 150px;
+    flex: 0 0 150px;
+}
+
+.whatcontainer .whatcard .whatimgbox img{
+    max-width: 100%;
+}
+
+.whatcontainer .whatcard .whatent {
+    margin-left: 20px;
+}
 /* Footer */
