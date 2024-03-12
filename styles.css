@@ -176,7 +176,7 @@ nav a:hover{
 .what h3 {
     padding: 8%;
     font-size: 80px;
-    text-shadow: rgb(0, 0, 0) 1px 0 10px;
+    text-shadow: rgb(0, 0, 255) 1px 0 10px;
     letter-spacing: 4px;
     color: rgb(200, 0, 0, 0.8);
 }
