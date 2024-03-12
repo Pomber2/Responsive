@@ -165,14 +165,6 @@ nav a:hover{
     
 }
 
-.whatbody {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    flex-direction: row;
-    width: 70%;
-}
 .what h3 {
     padding: 8%;
     font-size: 80px;
@@ -188,37 +180,72 @@ nav a:hover{
     color: rgb(200, 0, 0, 0.8);
 }
 
-
-.whatcontainer {
-    position: relative;
-    width: 100%;
+.whatbody {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 1000px;
+    display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    
 }
 
-.whatcontainer .whatcard {
+.container .card {
     position: relative;
-    max-width: 50%;
-    background: rgb(0, 0, 255, 0.8);
+    max-width: 450px;
     margin: 10px;
     padding: 15px;
     display: flex;
 }
 
-.whatcontainer .whatcard .whatimgbox {
+.container .card .imgbox {
     max-width: 150px;
     flex: 0 0 150px;
 }
 
-.whatcontainer .whatcard .whatimgbox img{
+.container .card .imgbox img {
     max-width: 100%;
 }
 
-.whatcontainer .whatcard .whatent {
+.container .card .content {
     margin-left: 20px;
+    margin-bottom: 20px;
 }
+
+.container .card .content h4{
+    text-shadow: rgb(0, 0, 255) 1px 0 10px;
+    letter-spacing: 4px;
+    color: rgb(200, 0, 0, 0.8);
+    margin-bottom: 5px;
+}
+
+.container .card .content p{
+    color: rgb(0, 0, 255, 0.8);
+}
+
+@media (max-width: 991px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .container .card {
+        flex-direction: column;
+        max-width: 350px;
+    }
+    .container .card .imgbox{
+        max-width: 100%;
+    }
+}
+
 /* Footer */
