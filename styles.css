@@ -17,6 +17,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -24,8 +25,13 @@ body {
     text-align: center;
     color: rgb(200, 0, 0);
     width: 100%;
+    min-height: calc(100vh - 100px - 100px);
+    padding-bottom: 50px;
 }
 
+h3 {
+    font-family: "PM";
+}
 
 /* Banner */
 .wrapper {
@@ -78,11 +84,11 @@ nav a:hover{
 }
 
 .banner-area {
-    background-image: url(media/pokeball_banner.jpg);
+    background-image: url("media/pokeball_banner.jpg");
     background-size: cover;
     background-position: center center;
     top: 100px;
-    height: 100vh;
+    height: 1000px;
     width: 100%;
     position: fixed;
 }
@@ -108,7 +114,7 @@ nav a:hover{
 
 
 
-/* Body */
+/* Body  Who */
 .content-area {
     width: 100%;
     height: 1200px;
@@ -154,9 +160,16 @@ nav a:hover{
     font-style: italic;
 }
 
+@media (max-width: 991px) {
+    .content-area {
+        max-width: 991px;
+    }
+}
+
+    /* Body What */
 .what {
     width: 100%;
-    height: 1200px;
+    height: 1500px;
     position: relative;
     background-image: url("media/pikabackdrop.jpg");
     background-size: cover;
@@ -165,17 +178,19 @@ nav a:hover{
     
 }
 
-.what h3 {
-    padding: 8%;
-    font-size: 80px;
-    text-shadow: rgb(0, 0, 255) 1px 0 10px;
-    letter-spacing: 4px;
-    color: rgb(200, 0, 0, 0.8);
+.what .what-title {
+    display: flex;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0 0 0;
 }
 
-.whatent h4 {
-    padding: 8%;
-    text-shadow: rgb(0, 0, 0) 1px 0 10px;
+.what h3 {
+    padding: 10px 0 0 0;
+    font-size: 80px;
+    text-shadow: rgb(0, 0, 255) 1px 0 10px;
     letter-spacing: 4px;
     color: rgb(200, 0, 0, 0.8);
 }
@@ -189,7 +204,8 @@ nav a:hover{
 
 .container {
     position: relative;
-    width: 1000px;
+    width: 1500px;
+    height: 1000px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -202,6 +218,7 @@ nav a:hover{
     margin: 10px;
     padding: 15px;
     display: flex;
+    
 }
 
 .container .card .imgbox {
@@ -216,6 +233,7 @@ nav a:hover{
 .container .card .content {
     margin-left: 20px;
     margin-bottom: 20px;
+    padding: 10px;
 }
 
 .container .card .content h4{
@@ -227,25 +245,199 @@ nav a:hover{
 
 .container .card .content p{
     color: rgb(0, 0, 255, 0.8);
+    text-shadow: rgb(200, 0, 0) 1px 0 10px;
 }
 
-@media (max-width: 991px) {
+.container .card .content span{
+    font-style: italic;
+    font-weight: 800;
+    font-family: "PM";
+}
+
+@media all and (max-width: 991px) {
     .container {
         flex-direction: column;
     }
 }
 
-@media (max-width: 768px) {
+@media all and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .container .card {
+        max-width: 600px;
+        max-height: 250px;
+    }
+    .container .card .imgbox{
+        
+        max-width: 50%;
+        margin-bottom: auto;
+    }
+    .container .card .content {
+        max-width: 50%;
+        margin-left: 0px;
+        margin-bottom: auto;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .what {
+        width: 600px;
+        background-size: cover;
+        background-position: center center;
+    }
     .container {
         flex-direction: column;
     }
     .container .card {
         flex-direction: column;
-        max-width: 350px;
+        max-width: 400px;
+        
     }
     .container .card .imgbox{
-        max-width: 100%;
+        max-width: 30%;
+        margin-bottom: auto;
     }
+    .container .card .content {
+        max-width: 25%;
+        margin-left: 0px;
+        margin-bottom: auto;
+    }
+    
 }
 
+    /* Body Where */
+
+.where {
+        width: 100%;
+        position: relative;
+        background-image: url("media/charzbackdrop.jpg");
+        background-size: cover;
+        background-position: center center;
+        top: 550px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        min-height: 1200px;
+}
+
+.where h3 {
+    padding: 10px 0 0 0;
+    font-size: 80px;
+    text-shadow: rgb(0, 0, 255) 1px 0 10px;
+    letter-spacing: 4px;
+    color: rgb(200, 0, 0, 0.8);
+}
+
+.wherebody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 90%;
+    border: 1px solid red;
+}
+
+.wherecontain {
+    position: relative;
+    width: 95%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1px solid red;
+}
+
+.wherecontain .whereimg {
+    max-width: 90%;
+    flex: 0 0 1000px;
+}
+
+.wherecontain .whereimg img {
+    max-width: 100%;
+}
+
+.wherecontain .wherecontent p {
+    border: 1px solid blue;
+    padding: 1em;
+    margin: 0.5em;
+    line-height: 3em;
+    text-shadow: rgb(0, 0, 255) 1px 0 10px;
+}
+
+/* Body When */
+.when {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-image: url("media/mini-ball-backdrop.jpg");
+    background-size: cover;
+    background-position: center center;
+    top: 550px;
+    border: 1px solid purple;
+    min-height: fit-content;
+}
+
+.whentitle {
+    padding: 10px 0 0 0;
+    margin-top: 2em;
+    border: 1px solid darkgreen;
+}
+.when h3 {
+    font-size: 80px;
+    text-shadow: rgb(0, 0, 255) 1px 0 10px;
+    letter-spacing: 4px;
+    color: rgb(200, 0, 0, 0.8);
+    
+}
+
+.whencontainer {
+    position: relative;
+    width: 95%;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    margin: 2em;
+}
+
+.whencontainer p {
+    border: 1px solid blue;
+    padding: 1em;
+    margin: 0.5em;
+    line-height: 3em;
+    text-shadow: rgb(0, 0, 255) 1px 0 10px;
+}
+
+.whencontainer ul {
+    border: 1px solid white;
+    list-style: none;
+    letter-spacing: 4px;
+    line-height: 3em;
+    color: rgb(0, 0, 255);
+    text-shadow: rgb(255, 0, 0) 1px 0 10px;
+    opacity: 0.9;
+    width: 40%;
+}
+
+.whenbody {
+
+}
 /* Footer */
+
+footer {
+    background-color: rgb(0, 0, 255);
+    padding-bottom: 4rem;
+    margin: 2rem;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    background-color: rgb(0, 0, 255);
+}
