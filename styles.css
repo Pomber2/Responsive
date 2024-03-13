@@ -88,7 +88,7 @@ nav a:hover{
     background-size: cover;
     background-position: center center;
     top: 100px;
-    height: 1000px;
+    height: 500px;
     width: 100%;
     position: fixed;
 }
@@ -417,27 +417,47 @@ nav a:hover{
     list-style: none;
     letter-spacing: 4px;
     line-height: 3em;
-    color: rgb(0, 0, 255);
+    color: rgb(183, 255, 0);
     text-shadow: rgb(255, 0, 0) 1px 0 10px;
     opacity: 0.9;
     width: 40%;
 }
 
 .whenbody {
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 90%;
+    border: 1px solid red;
 }
 /* Footer */
 
 footer {
+    position: relative;
     background-color: rgb(0, 0, 255);
     padding-bottom: 4rem;
-    margin: 2rem;
+    width: 100%;
+    margin: 0;
 }
 
 .footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    position: relative;
     height: auto;
     background-color: rgb(0, 0, 255);
+    margin-top: 30rem;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.footer h2 {
+    font-family: "Madimi One";
+    letter-spacing: 4px;
+    font-size: xx-large;
+}
+.footer h3 {
+    font-family: "Madimi One";
+    letter-spacing: 4px;
+    font-size: x-large;
+    line-height: 50px;
 }
